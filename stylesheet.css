@@ -1,8 +1,43 @@
-JS Fiddle example: 
-https://jsfiddle.net/1fzgah3n/
+/* JS Fiddle example: 
+https://jsfiddle.net/1fzgah3n/  */
+:root {
+    --dakerblue:#020659;
+    --navy:  #020873;
+    --dkblue: #030A8C;
+    --blueNebula: #0D8DFB;
+    --Ultramarine: #2104D9;
+    --Brightblue: #2699FB;
+    --Violetred: #590242;
 
+    --font: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-Menu Code for Mobile First Style (minus the bits you know how to do): 
+html {
+    background-color: #020659;
+}
+body {
+    font-family: var(--font);
+    width: 375px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+/* Menu Code for Mobile First Style (minus the bits you know how to do):  */
+h1 {
+    font-size:1.25em;
+}
+
+h2, h3 {
+    font-size: 1em;
+}
+
+p, dl, dd {
+    font-size: 1em;
+}
+
+footer p {
+    font-size: .75em;
+}
 
 ul {
     overflow: hidden;
@@ -69,4 +104,39 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     label span, input {
         display: none;
     }
+}
+
+audio::-webkit-media-controls-mute-button {
+
+}
+audio::-webkit-media-controls-play-button {
+
+}
+audio::-webkit-media-controls-enclosure {
+
+}
+
+#trending ::-webkit-scrollbar {
+
+}
+#trending ::-webkit-scrollbar-track {
+
+}
+#trending ::-webkit-scrollbar-thumb {
+
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+
 }

@@ -1,7 +1,53 @@
-/* JS Fiddle example: 
-https://jsfiddle.net/1fzgah3n/  */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 :root {
-    --dakerblue:#020659;
+    --darkerblue:#020659;
     --navy:  #020873;
     --dkblue: #030A8C;
     --blueNebula: #0D8DFB;
@@ -12,32 +58,302 @@ https://jsfiddle.net/1fzgah3n/  */
     --font: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+/* JS Fiddle example: 
+https://jsfiddle.net/1fzgah3n/  */
+
+/*text*/
 html {
-    background-color: #020659;
+    background-color: var(--darkerblue);
 }
 body {
-    font-family: var(--font);
-    width: 375px;
+    max-width: 375px;
     margin: 0 auto;
     background-color: #ffffff;
+    font-family: Optima, sans-serif;
 }
 
-/* Menu Code for Mobile First Style (minus the bits you know how to do):  */
+header{
+    text-align: left;
+    padding: 5px;
+    background-image: linear-gradient(to right,  #2104D9, #020873, black);
+    color: #ffffff;
+}
+
+nav {
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+nav li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  
+nav li a:hover,
+  header .menu-btn:hover {
+    background-color: #f4f4f4;
+  }
+
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+  
+
+nav :hover {
+    background-color: var(--Violetred);
+}
+
 h1 {
-    font-size:1.25em;
+    font-size: 22px;
+    line-height: 2em;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 h2, h3 {
-    font-size: 1em;
+    font-weight: bold;
+    color: var(--Violetred);
+    line-height: 2em;
 }
 
-p, dl, dd {
-    font-size: 1em;
+.scroll p {
+    text-align: center;
+    color: #ffffff;
+}
+
+.light h3 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.dark h3 {
+    text-align: center;
+    color: #ffffff;
+}
+
+#playlists section {
+    background-color: var(--Brightblue);
+}
+
+#playlists section :hover {
+    background-color: var(--Violetred);
+}
+
+
+.light {
+    background-color: var(--blueNebula);
+}
+
+
+#curated section {
+    background-color: var(--dkblue);
+}
+
+#curated section :hover {
+    background-color: var(--Violetred);
+}
+
+.dark {
+    background-color: var(--navy);
+}
+
+
+#playlists, #curated {
+    display: block;
+    
+}
+
+footer {
+    text-align: center;
 }
 
 footer p {
-    font-size: .75em;
+    color: var(--Violetred);
 }
+/*scroll*/
+.scroll {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+
+.scroll div {
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255,255,255,.75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+
+dl {
+    display: flex;
+}
+
+dt {
+    padding-right: 5px;
+}
+
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+.more {
+    text-decoration: none;
+    background-color: var(--Violetred);
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 30px 32px;
+}
+.more :hover {
+    background-color: var(--darkerblue);
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255,255,255,.5);
+}
+
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px var(--Violetred);
+}
+
+#trending ::-webkit-scrollbar-thumb {
+    background: var(--Violetred);
+}
+
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: var(--darkerblue);
+}
+
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px var(--darkerblue);
+}
+
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: var(--darkerblue);
+    border-radius: 5px;
+}
+
+/* Menu Code for Mobile First Style (minus the bits you know how to do): */
+
+/*menu*/
+nav ul {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon*/
+
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+nav label span {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+nav label span:before,
+nav label span:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+nav label span:before {
+  top: 5px;
+}
+
+nav label span:after {
+  top: -5px;
+}
+
+/*menu button*/
+
+nav input {
+    display: none;
+  }
+  
+nav input:checked ~ ul {
+    max-height: 240px;
+  }
+  
+nav input:checked ~ ul span {
+    background: transparent;
+  }
+  
+nav input:checked ~ label span:before {
+    transform: rotate(-45deg);
+  }
+  
+nav input:checked ~ label span:after {
+    transform: rotate(45deg);
+  }
+  
+nav input:checked ~ label:not(.steps) span:before,
+nav input:checked ~ label:not(.steps) span:after {
+    top: 0;
+  }
+
 
 ul {
     overflow: hidden;
@@ -93,6 +409,9 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     top: 0;
 }
 
+
+/*media*/
+
 @media screen and (min-width:834px) {
     ul {
         overflow: visible;
@@ -106,37 +425,10 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     }
 }
 
-audio::-webkit-media-controls-mute-button {
+@media screen and (min-width:834px) {
+    body {
+        max-width: 834px;
+    }
 
-}
-audio::-webkit-media-controls-play-button {
-
-}
-audio::-webkit-media-controls-enclosure {
-
-}
-
-#trending ::-webkit-scrollbar {
-
-}
-#trending ::-webkit-scrollbar-track {
-
-}
-#trending ::-webkit-scrollbar-thumb {
-
-}
-#trending ::-webkit-scrollbar-thumb:hover {
-
-}
-#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
-
-}
-#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
-
-}
-#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
-
-}
-#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
-
+   
 }
